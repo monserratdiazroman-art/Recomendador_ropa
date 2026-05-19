@@ -22,4 +22,5 @@ def recomendar(color, estilo, genero):
     return {
         "prenda": fila["Prenda"],
         "imagen": fila["Imagen"]
+        print(df.head())
     }
