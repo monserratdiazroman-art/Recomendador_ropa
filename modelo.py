@@ -1,25 +1,36 @@
 import pandas as pd
-import os
+from sklearn.preprocessing import LabelEncoder
+from sklearn.neighbors import NearestNeighbors
 
-def cargar_datos():
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    ruta_csv = os.path.join(BASE_DIR, "Ropa.csv")
-    return pd.read_csv(ruta_csv)
+# cargar csv
+df = pd.read_csv("Ropa.csv")
+
+# convertir texto a números
+le_color = LabelEncoder()
+le_estilo = LabelEncoder()
+le_genero = LabelEncoder()
+
+df["Color_num"] = le_color.fit_transform(df["Color"])
+df["Estilo_num"] = le_estilo.fit_transform(df["Estilo"])
+df["Genero_num"] = le_genero.fit_transform(df["Genero"])
+
+# entrenamiento IA
+X = df[["Color_num", "Estilo_num", "Genero_num"]]
+
+modelo = NearestNeighbors(n_neighbors=1)
+modelo.fit(X)
 
 def recomendar(color, estilo, genero):
-    
-    df = cargar_datos()
 
-    resultado = df[
-        (df["Color"] == color) &
-        (df["Estilo"] == estilo) &
-        (df["Genero"] == genero)
-    ]
+    entrada = [[
+        le_color.transform([color])[0],
+        le_estilo.transform([estilo])[0],
+        le_genero.transform([genero])[0]
+    ]]
 
-    if not resultado.empty:
-        fila = resultado.iloc[0]
-    else:
-        fila = df.iloc[0]
+    distancia, indice = modelo.kneighbors(entrada)
+
+    fila = df.iloc[indice[0][0]]
 
     return {
         "prenda": fila["Prenda"],
