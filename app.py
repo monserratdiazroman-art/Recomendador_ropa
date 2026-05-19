@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from modelo import recomendar
 import os
+print("APP INICIANDO...")
 
 app = Flask(__name__, template_folder="templates")
 
@@ -28,4 +29,6 @@ def recomendar_outfit():
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
+    print("Puerto:", port)
     app.run(host="0.0.0.0", port=port)
+    
