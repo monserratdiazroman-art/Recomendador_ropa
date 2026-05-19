@@ -1,0 +1,20 @@
+Color,Estilo,Genero,Prenda,Imagen
+Negro,Casual,Hombre,Outfit casual negro hombre,casual_negro_hombre.jpg
+Blanco,Casual,Hombre,Outfit casual Blanco hombre,casual_blanco_hombre.jpg
+Azul,Casual,Hombre,Outfit casual azul hombre,casual_azul_hombre.jpg
+Negro,Formal,Hombre,Outfit formal negro Hombre,formal_negro_hombre.jpg
+Blanco,Formal,Hombre,Outfit formal blanco Hombre,formal_blanco_hombre.jpg
+Azul,Formal,Hombre,Outfit formal azul Hombre,formal_azul_hombre.jpg
+Negro,Deportivo,Hombre,Outfit deportivo negro Hombre,deportivo_negro_hombre.jpg
+Blanco,Deportivo,Hombre,Outfit deportivo blanco Hombre,deportivo_blanco_hombre.jpg
+Azul,Deportivo,Hombre,Outfit deportivo azul Hombre,deportivo_azul_hombre.jpg
+
+Negro,Casual,Mujer,Outfit casual negro mujer,casual_negro_mujer.jpg
+Blanco,Casual,Mujer,Outfit casual blanco mujer,casual_blanco_mujer.jpg
+Azul,Casual,Mujer,Outfit casual azul mujer,casual_azul_mujer.jpg
+Negro,Formal,Mujer,Outfit formal negro mujer,formal_negro_mujer.jpg
+Blanco,Formal,Mujer,Outfit formal blanco mujer,formal_blanco_mujer.jpg
+Azul,Formal,Mujer,Outfit formal azul mujer,formal_azul_mujer.jpg
+Negro,Formal,Mujer,Outfit deportivo negro mujer,deportivo_negro_mujer.jpg
+Blanco,Deportivo,Mujer,Outfit deportivo blanco mujer,deportivo_blanco_mujer.jpg
+Azul,Deportivo,Mujer,Outfit deportivo azul mujer,deportivo_azul_mujer.jpg
