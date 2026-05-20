@@ -9,7 +9,7 @@ app = Flask(__name__, template_folder="templates")
 def inicio():
     return render_template("index.html")
 
-@app.route("/recomendar", methods=["POST"])
+@app.route("/recomendar", methods=["GET","POST"])
 def recomendar_outfit():
 
     color = request.form["color"]
